@@ -4,6 +4,7 @@ import { UploadOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { postdata } from "../utils/Methods";
 import { useMutation } from "@tanstack/react-query";
+import { REGISTER_USER } from "../utils/Constant/apiConstant";
 
 const { Header, Content } = Layout;
 
@@ -14,7 +15,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const mutation = useMutation({
-    mutationFn: (formData) => postdata("/users/register", formData),
+    mutationFn: (formData) => postdata(REGISTER_USER, formData),
     onSuccess: () => {
       setLoading(false);
       message.success("Registration successful!");

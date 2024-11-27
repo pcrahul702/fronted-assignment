@@ -6,6 +6,7 @@ import { setUser } from "../redux/slices/authSlice";
 import { useDispatch } from "react-redux";
 import { postdata } from "../utils/Methods";
 import LoadingSpinner from "../components/Loading/LoadingSpinner";
+import { USER_LOGIN } from "../utils/Constant/apiConstant";
 
 const { Header, Content } = Layout;
 
@@ -15,7 +16,7 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false);
 
   const mutation = useMutation({
-    mutationFn: (user) => postdata("/users/login", user),
+    mutationFn: (user) => postdata(USER_LOGIN, user),
     onSuccess: (data) => {
       setLoading(false);
       message.success("Login successful!")

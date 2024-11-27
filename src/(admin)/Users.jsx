@@ -17,6 +17,7 @@ import {
 } from "../redux/slices/userSlice";
 
 import CustomError from "../components/CustomError/CustomError";
+import { GET_USER_LIST } from "../utils/Constant/apiConstant";
 
 const Users = () => {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ const Users = () => {
   const [pageSize, setPageSize] = useState(10);
 
   const { data, isLoading, error } = useQuery({
-    queryFn: () => getdata(`/users`),
+    queryFn: () => getdata(GET_USER_LIST),
   });
 
   useEffect(() => {
