@@ -1,0 +1,26 @@
+.ant-dropdown-button button{
+    padding: 20px;
+    background-color: #005EB8;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+
+}
+.ant-dropdown-button button:hover{
+    padding: 20px!important;
+    background-color: #003d80!important;
+    color: white!important;
+    font-size: 18px;
+    opacity: 40!important;
+    border-radius: 8px;
+    outline: none!important;
+    
+}
+.ant-dropdown-trigger{
+    width: 48px!important;
+    outline: none!important;
+}
+.ant-dropdown-trigger:hover{
+   
+    outline: none!important;
+}

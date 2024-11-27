@@ -1,0 +1,5 @@
+export const GET_ALL_COURSE='/api/course/all'
+export const GET_COURSE_BY_ID='/api/course'
+export const UPDATE_COURSE_BY_ID='/api/course'
+export const GET_ALL_DISCIPLINE='/api/discipline/agency'
+export const GET_CONTENT_BY_MODULE_ID='/api/course/module/coursemodule-3c49f0db/assets'
