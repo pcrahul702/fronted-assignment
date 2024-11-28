@@ -1,0 +1,1 @@
+import{j as e}from"./index-Bt5p3x_A.js";const s=()=>e.jsx("div",{className:"flex items-center justify-center h-screen",children:e.jsx("h1",{className:"text-2xl font-bold",children:"404 - Page Not Found"})});export{s as default};
