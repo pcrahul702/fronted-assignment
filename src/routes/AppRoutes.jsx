@@ -6,11 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import LoadingSpinner from "../components/Loading/LoadingSpinner";
-
-// Lazy load components
-const AdminLayout = React.lazy(() =>
-  import("../components/shared/AdminLayout")
-);
+const AdminLayout = React.lazy(() => import("../components/shared/AdminLayout"));
 const AdminHome = React.lazy(() => import("../(admin)/Admin"));
 const UserList = React.lazy(() => import("../(admin)/Users"));
 const UserDashboard = React.lazy(() => import("../pages/Home"));
@@ -61,7 +57,6 @@ const AppRoutes = ({ role, isAuthenticated }) => {
                   <Route path="/user/dashboard" element={<UserDashboard />} />
                 </Route>
 
-                // Add more user-specific routes here
               )}
             </>
           )}
