@@ -137,21 +137,7 @@ const Users = () => {
         </span>
       ),
     },
-    {
-      title: "Action",
-      key: "action",
-      render: (text, record) => (
-        <div className="flex justify-center">
-          <Dropdown
-            overlay={menu(record)}
-            trigger={["click"]}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <EllipsisOutlined />
-          </Dropdown>
-        </div>
-      ),
-    },
+   
   ];
 const handleRowClick=(record)=>{
   console.log(record)
@@ -168,25 +154,37 @@ navigate(`/admin/user/${record._id}`)
           <FilterComponent />
         </div>
       </div>
-      <TableComponent
-        columns={columns}
-        data={filteredData}
-        rowKey="id"
-        handleRowClick={handleRowClick}
-        rowSelection={{
-          type: "checkbox",
-          onChange: (selectedRowKeys, selectedRows) => {
-            console.log("Selected Row Keys:", selectedRowKeys);
-            console.log("Selected Rows:", selectedRows);
-          },
-        }}
-        pagination={{
-          pageSize,
-          showSizeChanger: true,
-          onShowSizeChange: (_, size) => setPageSize(size),
-          pageSizeOptions: ["5", "10", "20", "50", "100"],
-        }}
-      />
+      <div className="hidden lg:block p-4 bg-white shadow-md rounded-lg">
+  <h2 className="text-lg font-semibold mb-4 text-gray-700">Data Table</h2>
+  <TableComponent
+    columns={columns}
+    data={filteredData}
+    rowKey="id"
+    handleRowClick={handleRowClick}
+    rowSelection={{
+      type: "checkbox",
+      onChange: (selectedRowKeys, selectedRows) => {
+        console.log("Selected Row Keys:", selectedRowKeys);
+        console.log("Selected Rows:", selectedRows);
+      },
+    }}
+    pagination={{
+      pageSize,
+      showSizeChanger: true,
+      onShowSizeChange: (_, size) => setPageSize(size),
+      pageSizeOptions: ["5", "10", "20", "50", "100"],
+    }}
+  />
+</div>
+<div className="lg:hidden flex flex-col items-center justify-center bg-gray-50 p-6 rounded-lg shadow-md text-center">
+  <h3 className="text-lg font-semibold text-gray-700 mb-2">
+    Use a Laptop to View Details
+  </h3>
+  <p className="text-sm text-gray-500">
+    This feature is best experienced on larger screens. Please switch to a laptop or desktop device for full functionality.
+  </p>
+</div>
+
     </div>
   );
 };
