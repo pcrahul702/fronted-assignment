@@ -20,7 +20,6 @@ const LoginPage = () => {
     onSuccess: (data) => {
       setLoading(false);
       message.success("Login successful!")
-      console.log("logged data",data.data.data)
       const user=data?.data?.data?.user
       dispatch(
         setUser({

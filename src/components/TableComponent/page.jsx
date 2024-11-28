@@ -3,11 +3,14 @@ import { Table } from "antd";
 
 const Page = ({ data, columns, handleRowClick, rowKey,rowSelection,pagination }) => {
   return (
-    <Table
+    <div className="w-full overflow-x-auto ">
+        <Table
+    className=""
       columns={columns}
       dataSource={data}
       pagination={pagination}
-      scroll={{ x: "max-content" }}
+      scroll={{ x: "max-content" }} // Enables horizontal scrolling for overflow
+
       rowSelection={rowSelection}
       onRow={(record) => ({
         onClick: handleRowClick ? () => handleRowClick(record) : undefined, // Conditional handler
@@ -15,6 +18,8 @@ const Page = ({ data, columns, handleRowClick, rowKey,rowSelection,pagination })
       rowClassName={handleRowClick ? "cursor-pointer" : ""}
       rowKey={rowKey}
     />
+    </div>
+  
   );
 };
 
