@@ -46,7 +46,6 @@ const Register = () => {
   const handleAvatarChange = ({ file }) => {
     console.log(file)
     setAvatarFile(file);
-    console.log( URL.createObjectURL(file.originFileObj)); // Create a preview URL
   
   };
 
