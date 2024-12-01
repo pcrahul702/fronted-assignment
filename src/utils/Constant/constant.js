@@ -8,7 +8,7 @@ export const SIDEBAR_ITEMS = {
     {
       key: 'home',
       label: 'Home',
-      path: '/admin/home',
+      path: '/',
       icon: RiDashboardLine,
     },
     {
@@ -23,21 +23,16 @@ export const SIDEBAR_ITEMS = {
     {
       key: 'dashboard',
       label: 'Dashboard',
-      path: '/user/dashboard',
+      path: '/',
       icon: RiDashboardLine,
     },
     {
-      key: 'profile',
-      label: 'Profile',
-      path: '/user/profile',
+      key: 'Task',
+      label: 'task',
+      path: '/user/tasks',
       icon: RiUserLine,
     },
-    {
-      key: 'reports',
-      label: 'Reports',
-      path: '/user/report',
-      icon: RiPieChartLine,
-    },
+    
    
   ],
 };
